@@ -1,19 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    long long int x,i;
-    scanf("%lld",&x);
-
-    if(x%2==0){
-        if(x==2){
-           printf("%d",x);
+    long long int n,p,i=2;
+    scanf("%lld",&n);
+    for(n;n>=0;n--)
+    {
+        p=1;
+        while(i<n){
+            if(n%i==0){
+                p=0;
+                break;
+            }
+            i++;
         }
-        else{
-           printf("%d",x-1);
+        if(p==1){
+            printf("%lld",n);
+            break;
         }
-    }
-    else{
-        printf("%d",x);
     }
 
     return 0;
